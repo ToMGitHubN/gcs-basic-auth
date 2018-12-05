@@ -1,0 +1,20 @@
+{
+  "name": "reverse-proxy-gcs",
+  "version": "1.0.0",
+  "description": "Google Cloud Storageにbasic認証などを行うリバースプロキシ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "gae"
+  ],
+  "author": "tomita",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/debug-agent": "^3.0.0",
+    "@google-cloud/storage": "^2.2.0",
+    "basic-auth-connect": "^1.0.0",
+    "express": "^4.16.4"
+  }
+}
