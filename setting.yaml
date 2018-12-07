@@ -2,6 +2,7 @@ env_variables:
   # Google Cloud Storage Name
   BUCKET_NAME: 'hoge_bucket_name'
   #BASIC AUTH
+  BASIC_AUTH_ENABLED: 'true'
   BASIC_AUTH_NAME: 'hoge_name'
   BASIC_AUTH_PASSWORD: 'hoge_password'
   # Page Option
@@ -21,7 +22,7 @@ env_variables:
   ALLOW_REDIRECT_LIST: '["mp4"]'
   # GCP Option
   # transfer limit time
-  # memo: 1 hour = 1000 * 60 * 60 = 3600000
+  # memo: 1 hour = 1000 * 60 * 60 = 3600000ms
   GCS_URL_LIFETIME: 3600000
   # DEBUG
   STACKDRIVER_DEBUGGER: 'false'

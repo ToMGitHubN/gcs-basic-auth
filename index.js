@@ -10,7 +10,7 @@ var url = require('url');
 const express = require('express');
 const app = express();
 
-const basicAuthConnect = require('basic-auth-connect');
+
 
 
 const {Storage} = require('@google-cloud/storage');
@@ -18,7 +18,9 @@ const storage = new Storage();
 
 
 // basic auth setting
-const basicAuth = basicAuthConnect(process.env.BASIC_AUTH_NAME, process.env.BASIC_AUTH_PASSWORD);
+const basicAuthConnect = require('basic-auth-connect');
+const basicAuth = process.env.BASIC_AUTH_ENABLED === 'true' ? basicAuthConnect(process.env.BASIC_AUTH_NAME, process.env.BASIC_AUTH_PASSWORD) : (req, res, next)=>{ next(); };
+
 
 // bucket
 const bucket = storage.bucket(process.env.BUCKET_NAME);
