@@ -1,7 +1,7 @@
 # gcs-basic-authとは
 
 
-gcs-basic-authは、Gooogle Cloud Storage(以下、GCS)のファイルをBasic認証をつけて公開するためプログラムです。
+gcs-basic-authは、Google Cloud Storage(以下、GCS)のファイルをBasic認証をつけて公開するためプログラムです。
 Google App Engine(以下、GAE)にデプロイして使用します。
 
 GAEにアクセスされるとBasic認証を表示し、認証されるとリバースプロキシのように動いてGCSのファイルをユーザに転送します。
