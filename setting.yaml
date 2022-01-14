@@ -1,19 +1,19 @@
 env_variables:
   # Google Cloud Storage Name
-  BUCKET_NAME: 'hoge_bucket_name'
+  BUCKET_NAME: "hoge_bucket_name"
   #BASIC AUTH
-  BASIC_AUTH_ENABLED: 'true'
-  BASIC_AUTH_NAME: 'hoge_name'
-  BASIC_AUTH_PASSWORD: 'hoge_password'
+  BASIC_AUTH_ENABLED: "true"
+  BASIC_AUTH_NAME: "hoge_name"
+  BASIC_AUTH_PASSWORD: "hoge_password"
   # Page Option
-  DEFAULT_PAGE: 'index.html'
-  NOT_FOUND_PAGE: '404.html'
+  DEFAULT_PAGE: "index.html"
+  NOT_FOUND_PAGE: "404.html"
   # Tranfer Option
   # TRANSFER_MODE List: ALL_DIRECT or ALLOW_DIRECT or ALLOW_REDIRECT
   # ALL_DIRECT : all file direct transfer
   # ALLOW_DIRECT : ALLOW_DIRECT_LIST extension direct transfer, other file redirect
   # ALLOW_REDIRECT : ALLOW_REDIRECT_LIST file redirect GCS, other file direct transfer
-  TRANSFER_MODE: 'ALLOW_REDIRECT'
+  TRANSFER_MODE: "ALLOW_REDIRECT"
   # TRANSFER_MODE = ALLOW_DIRECT Only
   # extension of the target file
   ALLOW_DIRECT_LIST: '["html", "css", "js", "json"]'
@@ -25,4 +25,4 @@ env_variables:
   # memo: 1 hour = 1000 * 60 * 60 = 3600000ms
   GCS_URL_LIFETIME: 3600000
   # DEBUG
-  STACKDRIVER_DEBUGGER: 'false'
+  STACKDRIVER_DEBUGGER: "false"
