@@ -2,4 +2,4 @@ runtime: nodejs10
 env: standard
 instance_class: F2
 includes:
-- setting.yaml
+  - setting.yaml

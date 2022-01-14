@@ -4,7 +4,8 @@
   "description": "Google Cloud Storageにbasic認証などを行うリバースプロキシ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "prettier . --check"
   },
   "keywords": [
     "gae"
@@ -17,5 +18,15 @@
     "basic-auth-connect": "^1.0.0",
     "express": "^4.17.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,json,yaml,md}": [
+      "prettier --write"
+    ]
   }
 }
