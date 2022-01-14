@@ -4,7 +4,8 @@
   "description": "Google Cloud Storageにbasic認証などを行うリバースプロキシ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "prettier . --check"
   },
   "keywords": [
     "gae"
