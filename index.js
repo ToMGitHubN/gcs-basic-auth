@@ -84,7 +84,11 @@ async function fileSearch(url_parse) {
   let path_name = url_parse.pathname;
 
   if (path_name.slice(-1) === "/") {
-    path_name = path_name.slice(0, -1); // remove '/'
+    path_name = path_name.slice(0, -1); // remove tail '/'
+  }
+
+  if (path_name.slice(0, 1) === "/") {
+    path_name = path_name.slice(1); // remove head '/'
   }
 
   let is_file = false; //file find flg
@@ -96,10 +100,14 @@ async function fileSearch(url_parse) {
   if (is_file === false) {
     //file not found
 
-    if (await checkFileExists(`${path_name}/${DEFAULT_HTML}`)) {
-      //check defalut html
+    if (path_name !== "") {
+      path_name = path_name + "/";
+    }
+
+    if (await checkFileExists(`${path_name}${DEFAULT_HTML}`)) {//check defalut html
+      
       is_file = true;
-      path_name = `${path_name}/${DEFAULT_HTML}`;
+      path_name = `${path_name}${DEFAULT_HTML}`;
     }
 
     if (is_file === false) {
