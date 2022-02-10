@@ -113,10 +113,10 @@ async function fileSearch(url_parse) {
     if (is_file === false) {
       //defalut html not found
 
-      if (await checkFileExists(`/${NOT_FOUND_HTML}`)) {
+      if (await checkFileExists(NOT_FOUND_HTML)) {
         // check 404 html
         is_file = true;
-        path_name = `/${NOT_FOUND_HTML}`;
+        path_name = NOT_FOUND_HTML;
       } else {
         return [FILE_NOT_FOUND, ""];
       }
