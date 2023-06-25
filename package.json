@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@google-cloud/debug-agent": "^5.2.8",
-    "@google-cloud/storage": "^5.0.0",
+    "@google-cloud/storage": "^5.17.0",
     "basic-auth-connect": "^1.0.0",
     "express": "^4.17.3",
     "request": "^2.88.0"
